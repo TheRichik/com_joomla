@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="component" version="3.0" method="upgrade">
+
+	<!-- Metadata WOW -->
+	<name>COM_RICH</name>
+	<creationDate>June 2017</creationDate>
+	<version>0.0.1</version>
+	<author>Richard Bahrii</author>
+	<authorEmail>zrichikz@gmail.com</authorEmail>
+	<authorUrl>https://richik.com</authorUrl>
+	<license>License From Rich@Studio</license>
+	<copyright> A license Statement</copyright>
+	<description>COM_RICH_DESCRIPTION</description>
+
+	<!-- Files from front -->
+	<files folder="site">
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+		<fielname>controller.php</fielname>
+		<fielname>rich.php</fielname>		
+	</files>
+
+	<!-- language from front -->
+	<languages folder="site/language">
+		<language tag="ru-RU">ru-RU/ru-RU.com_rich</language>
+	</languages>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+	<administration>
+
+		<menu link="index.php?option=com_rich">COM_RICH</menu>
+
+		<files folder="admin">
+
+			<folder>views</folder>
+			<folder>models</folder>
+			<folder>controllers</folder>
+			<folder>language</folder>
+			<folder>tables</folder>
+			<folder>sql</folder>
+
+			<fielname>rich.php</fielname>
+			<fielname>controller.php</fielname>
+			
+		</files>
+
+		<languages folder="admin/language">
+
+			<language tag="ru-RU">ru-RU/ru-RU.com_rich.ini</language>
+			<language tag="ru-RU">ru-RU/ru-RU.com_rich.sys.ini</language>
+
+		</languages>
+
+	</administration>
+
+
+</extension>
